@@ -1,0 +1,18 @@
+@import (reference) '../../less/variables.less';
+
+.social {
+  display: flex;
+  align-items: center;
+  &__link {
+    transition: filter 0.3s ease-in-out;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    filter: brightness(1.3);
+  }
+}

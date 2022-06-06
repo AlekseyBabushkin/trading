@@ -1,0 +1,64 @@
+@import (reference) '../../less/variables.less';
+
+.burger {
+  position: relative;
+  width: 32px;
+  height: 24px;
+  margin-right: 40px;
+  z-index: 1000;
+  display: block;
+  background-color: @color-gray;
+  border: none;
+  cursor: pointer;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: @color-white;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    background-color: @color-white;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--active {
+    .burger__line {
+      opacity: 0;
+    }
+
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: auto;
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: (992px)) {
+    display: block;
+  }
+}

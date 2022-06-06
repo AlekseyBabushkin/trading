@@ -1,0 +1,38 @@
+@import (reference) '../../less/variables.less';
+
+.btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  padding: 16px 63px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &--small {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 11px 35px;
+  }
+
+  &--gold {
+    color: @color-gold;
+    border: 2px solid @color-gold;
+
+    &:hover {
+      color: @color-gray;
+      background-color: @color-gold;
+    }
+  }
+
+  &--brown {
+    color: @color-brown;
+    border: 2px solid @color-brown;
+
+    &:hover {
+      color: @color-gray;
+      background-color: @color-brown;
+    }
+  }
+}
