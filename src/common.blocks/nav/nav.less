@@ -1,0 +1,31 @@
+@import (reference) '../../less/variables.less';
+
+.nav {
+  
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-family: 'Bebas-Neue';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @media (min-width: @md) {
+      font-size: 20px;
+    }
+
+    @media (min-width: @lg) {
+      font-size: 32px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  
+}

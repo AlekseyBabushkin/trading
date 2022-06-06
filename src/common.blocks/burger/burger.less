@@ -4,8 +4,7 @@
   position: relative;
   width: 32px;
   height: 24px;
-  margin-right: 40px;
-  z-index: 1000;
+  margin-right: 32px;
   display: block;
   background-color: @color-gray;
   border: none;
@@ -39,26 +38,5 @@
 
   &::after {
     bottom: 0;
-  }
-
-  &--active {
-    .burger__line {
-      opacity: 0;
-    }
-
-    &::before {
-      top: 50%;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      bottom: auto;
-      top: 50%;
-      transform: rotate(-45deg);
-    }
-  }
-
-  @media (max-width: (992px)) {
-    display: block;
   }
 }

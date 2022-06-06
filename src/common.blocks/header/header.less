@@ -3,6 +3,7 @@
 .header {
   padding: 20px 0;
   background-color: @color-gray;
+  z-index: 20;
 
   &__wrapper {
     display: flex;
@@ -10,23 +11,61 @@
     justify-content: space-between;
   }
 
+  &__nav {
+    position: absolute;
+    height: 100%;
+    background: rgba(38, 38, 38, 0.7);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 28px;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-250%);
+
+    @media (min-width: @md) {
+      width: 50%;
+    }
+    @media (min-width: @lg) {
+      padding: 56px 100px;
+    }
+
+    &--visible {
+      transform: translateX(0);
+    }
+  }
+
   &__logo {
     margin-right: auto;
+    overflow: hidden;
+    width: 50px;
 
     svg {
       fill: @color-gold;
+    }
+
+    @media (min-width: @sm) {
+      overflow: visible;
     }
   }
 
   &__social {
     display: none;
     margin-right: 40px;
+
+    @media (min-width: @md) {
+      display: block;
+    }
   }
 
   &__contacts {
     display: none;
     margin-left: auto;
     margin-right: 24px;
+
+    @media (min-width: @lg) {
+      display: flex;
+    }
   }
 
   &__contact {
@@ -51,33 +90,19 @@
     &:hover {
       color: @color-gold;
     }
-  }
 
-  @media (min-width: @md) {
-    .header {
-      &__social {
+    @media (min-width: @xl) {
+      span {
         display: block;
       }
-    }
-  }
-  @media (min-width: @lg) {
-    .header {
-      &__contacts {
-        display: flex;
-      }
-    }
-  }
-  @media (min-width: @xl) {
-    .header {
-      &__contact {
-        span {
-          display: block;
-        }
 
-        svg {
-          margin-right: 10px;
-        }
+      svg {
+        margin-right: 10px;
       }
     }
   }
-}
+}  
+
+  
+  
+
