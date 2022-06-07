@@ -1,7 +1,50 @@
 @import (reference) '../../less/variables.less';
 
 .advantages {
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1040px;
+  }
+
+  &__rows {
+    max-width: 60%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 400%;
+  }
+
+  &__row-left{
+    animation: advantages__rows-left 30s linear infinite;
+  }
+
+  &__row-right{
+    animation: advantages__rows-right 30s linear infinite;
+  }
+
+  &__running {
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: rgba(255, 180, 135, 0.2);
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+    margin-right: 50px;
+  }  
+  
   &__inner {
+    position: absolute;
+    top: 0;
     padding: 32px 0 52px;
 
     @media (min-width: @md) {
@@ -39,10 +82,37 @@
     font-size: 16px;
     line-height: 150%;
     margin-bottom: 16px;
+
+    @media (min-width: @lg) {
+      font-size: 22px;
+    }
   }
 
   &__descr {
     font-size: 16px;
     line-height: 140%;
+
+    @media (min-width: @lg) {
+      font-size: 18px;
+    }
   }
+}
+
+@keyframes advantages__rows-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }  
+}
+
+@keyframes advantages__rows-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+  
 }
