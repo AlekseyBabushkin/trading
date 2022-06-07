@@ -20,3 +20,15 @@
 @color-gray: #262626;
 @color-white: #fff;
 @color-error: #ff4d4d;
+
+.adaptiv-font(@pcSize, @mobSize) {
+  @addsize: @pcSize - @mobSize;
+  @addMobSize: @addsize + @addsize * 0.7;
+
+  @media (max-width: @md) {
+    font-size: calc(@mobSize + @addMobSize * ((100vw - 320) / @content-width));
+  }
+  @media (min-width: @md) {
+    font-size: calc(@mobSize + @addsize * (100vw / @content-width));
+  }
+}

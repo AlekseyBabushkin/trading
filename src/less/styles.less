@@ -43,6 +43,16 @@
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   height: 100%;
@@ -61,6 +71,11 @@ li,
 button {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 a {

@@ -1,0 +1,48 @@
+@import (reference) '../../less/variables.less';
+
+.advantages {
+  &__inner {
+    padding: 32px 0 52px;
+
+    @media (min-width: @md) {
+      column-count: 2;
+      gap: 32px;
+    }
+
+    @media (min-width: @lg) {
+      padding: 166px 0;
+    }
+  }
+
+  &__item {
+    max-width: 489px;
+    background: #262626;
+    border: 2px solid #ffb487;
+    border-radius: 10px;
+    padding: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: @md) {
+      break-inside: avoid;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
