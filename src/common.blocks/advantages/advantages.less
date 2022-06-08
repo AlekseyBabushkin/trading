@@ -2,31 +2,44 @@
 
 .advantages {
   position: relative;
-  overflow: hidden;
 
   &__container {
-    max-width: 1040px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @media (min-width: @md) {
+      position: absolute;
+    }
   }
 
   &__rows {
-    max-width: 60%;
+    max-width: 100%;
+    overflow: hidden;
+    display: none;
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    @media (min-width: @md) {
+      display: block;
     }
   }
 
   &__row {
     display: flex;
-    width: 400%;
+    width: 270%;
   }
 
-  &__row-left{
-    animation: advantages__rows-left 30s linear infinite;
+  &__row--left {
+    animation: run-left 15s linear infinite;
   }
 
-  &__row-right{
-    animation: advantages__rows-right 30s linear infinite;
+  &__row--right {
+    animation: run-right 15s linear infinite;
   }
 
   &__running {
@@ -37,20 +50,17 @@
     letter-spacing: 0.05em;
     color: rgba(255, 180, 135, 0.2);
     text-transform: uppercase;
-    white-space: nowrap;
     width: 100%;
     margin-right: 50px;
-  }  
-  
-  &__inner {
-    position: absolute;
-    top: 0;
-    padding: 32px 0 52px;
+  }
 
-    @media (min-width: @md) {
-      column-count: 2;
-      gap: 32px;
-    }
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 0;
 
     @media (min-width: @lg) {
       padding: 166px 0;
@@ -58,22 +68,15 @@
   }
 
   &__item {
-    max-width: 489px;
-    background: #262626;
+    position: relative;
+    width: 100%;
     border: 2px solid #ffb487;
     border-radius: 10px;
     padding: 20px;
-
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
+    background-color: @color-gray;
 
     @media (min-width: @md) {
-      break-inside: avoid;
-
-      &:not(:last-child) {
-        margin-bottom: 32px;
-      }
+      max-width: 470px;
     }
   }
 
@@ -98,21 +101,20 @@
   }
 }
 
-@keyframes advantages__rows-left {
+@keyframes run-left {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
-  }  
+  }
 }
 
-@keyframes advantages__rows-right {
+@keyframes run-right {
   0% {
     transform: translateX(-50%);
   }
   100% {
     transform: translateX(0%);
   }
-  
 }

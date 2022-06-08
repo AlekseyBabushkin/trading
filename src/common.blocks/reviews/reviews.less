@@ -1,0 +1,133 @@
+@import (reference) '../../less/variables.less';
+
+.reviews {
+  padding: 25px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -290px;
+    bottom: -235px;
+    height: 500px;
+    width: 500px;
+    background-image: url('../reviews/img/reviews-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: -1;
+  }
+
+  @media (min-width: @lg) {
+    &::before {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: @color-brown;
+    margin-bottom: 10px;
+
+    @media (min-width: @lg) {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    color: @color-gold;
+    margin-bottom: 32px;
+
+    @media (min-width: @md) {
+      font-family: 'Bebas-Neue';
+      font-size: 40px;
+      margin-bottom: 46px;
+    }
+
+    @media (min-width: @lg) {
+      font-size: 54px;
+      margin-bottom: 52px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    margin-bottom: 32px;
+
+    @media (min-width: @md) {
+      grid-template-columns: repeat(12, 1fr);
+      row-gap: 32px;
+      column-gap: 32px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    grid-column: 2 span;
+    background-color: @color-gray;
+    padding: 28px 23px;
+    border-radius: 10px;
+
+    @media (min-width: @md) {
+      grid-column: 6 span;
+    }
+
+    @media (min-width: @lg) {
+      grid-column: 4 span;
+      padding: 32px 29px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    margin-bottom: 24px;
+
+    @media (min-width: @lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: @color-bg;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+
+    @media (min-width: @lg) {
+      font-size: 18px;
+    }
+  }
+
+  &__result {
+    width: 160px;
+    font-weight: 500;
+    line-height: 140%;
+    color: @color-gold;
+  }
+
+  &__descr {
+    line-height: 140%;
+
+    @media (min-width: @lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,111 @@
+@import (reference) '../../less/variables.less';
+
+.faq {
+  padding: 25px 0;
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: @color-brown;
+    margin-bottom: 10px;
+
+    @media (min-width: @lg) {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    color: @color-gold;
+    margin-bottom: 32px;
+
+    @media (min-width: @md) {
+      font-family: 'Bebas-Neue';
+      font-size: 40px;
+      margin-bottom: 46px;
+    }
+
+    @media (min-width: @lg) {
+      font-size: 54px;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.faq-accordion {
+  &__item {
+    margin-bottom: 16px;
+
+    @media (min-width: @lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__trigger {
+    position: relative;
+    border: none;
+    width: 100%;
+    padding: 15px 44px 15px 24px;
+    appearance: none;
+    text-align: left;
+    color: @color-white;
+    background-color: @color-gray;
+
+    @media (min-width: @md) {
+      border-radius: 5px;
+      padding: 26px 56px;
+    }
+
+    @media (min-width: @lg) {
+      border-radius: 10px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 140%;
+
+    @media (min-width: @md) {
+      font-weight: 500;
+      font-size: 22px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: @md) {
+      width: 32px;
+      height: 32px;
+      right: 45px;
+    }
+  }
+
+  &__descr {
+    padding-top: 16px;
+    font-size: 16px;
+    line-height: 140%;
+
+    @media (min-width: @md) {
+      padding-top: 20px;
+      font-size: 22px;
+    }
+  }
+
+  &__item .faq-accordion__icon {
+    transition: transform 0.25s ease;
+  }
+
+  &__item.open .faq-accordion__icon {
+    transform: rotate(45deg) translate(-35%, -37%);
+  }
+}
