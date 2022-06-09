@@ -1,0 +1,29 @@
+@import (reference) '../../less/variables.less';
+
+.footer {
+  padding: 25px 0;
+
+  @media (min-width: @lg) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: @md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo,
+  &__text {
+    margin-bottom: 16px;
+    @media (min-width: @md) {
+      margin-bottom: 0;
+    }
+  }
+}

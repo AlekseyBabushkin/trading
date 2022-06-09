@@ -45,6 +45,7 @@
     font-size: 28px;
     color: @color-gold;
     margin-bottom: 32px;
+    position: relative;
 
     @media (min-width: @md) {
       font-family: 'Bebas-Neue';
@@ -55,6 +56,19 @@
     @media (min-width: @lg) {
       font-size: 54px;
       margin-bottom: 52px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -120px;
+      width: 400px;
+      height: 400px;
+      background-image: url('../../assets/img/blur.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 

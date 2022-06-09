@@ -1,0 +1,78 @@
+@import (reference) '../../less/variables.less';
+
+.feedback {
+  padding: 50px 0;
+
+  &__inner {
+    background-color: @color-gray;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 12px;
+    border-radius: 40px;
+
+    @media (min-width: @md) {
+      flex-direction: row;
+    }
+
+    @media (min-width: @lg) {
+      padding: 56px;
+    }
+
+    @media (min-width: @xl) {
+      padding: 56px 100px;
+    }
+  }
+
+  &__title {
+    max-width: 368px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.3;
+    color: @color-gold;
+    margin-bottom: 16px;
+    position: relative;
+
+    @media (min-width: @md) {
+      font-family: 'Bebas-Neue';
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: @lg) {
+      font-size: 54px;
+      margin-bottom: 52px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+
+    @media (min-width: @md) {
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: @md) {
+      padding: 0 16px;
+      width: 50%;
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 1;
+  }
+}

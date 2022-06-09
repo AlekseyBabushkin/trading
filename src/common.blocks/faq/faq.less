@@ -21,6 +21,7 @@
     font-size: 28px;
     color: @color-gold;
     margin-bottom: 32px;
+    position: relative;
 
     @media (min-width: @md) {
       font-family: 'Bebas-Neue';
@@ -31,6 +32,28 @@
     @media (min-width: @lg) {
       font-size: 54px;
       margin-bottom: 52px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -120px;
+      width: 400px;
+      height: 400px;
+      background-image: url('../../assets/img/blur.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 25px auto 25px;
+
+    @media (min-width: @md) {
+      margin-top: 50px;
     }
   }
 }
@@ -76,9 +99,8 @@
 
   &__icon {
     position: absolute;
-    top: 50%;
+    top: 17px;
     right: 22px;
-    transform: translateY(-50%);
     flex-shrink: 0;
     width: 20px;
     height: 20px;
@@ -87,6 +109,7 @@
       width: 32px;
       height: 32px;
       right: 45px;
+      top: 26px;
     }
   }
 
@@ -106,6 +129,6 @@
   }
 
   &__item.open .faq-accordion__icon {
-    transform: rotate(45deg) translate(-35%, -37%);
+    transform: rotate(45deg);
   }
 }

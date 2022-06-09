@@ -1,0 +1,36 @@
+@import (reference) '../../less/variables.less';
+
+.form {
+  &__info {
+    margin-bottom: 16px;
+
+    @media (min-width: @md) {
+      margin-bottom: 46px;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: @md) {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    line-height: 1.4;
+    padding-left: 4px;
+
+    @media (min-width: @md) {
+      font-size: 18px;
+    }
+  }
+}

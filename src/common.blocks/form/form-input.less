@@ -1,0 +1,105 @@
+@import (reference) '../../less/variables.less';
+.form-input {
+  appearance: none;
+  border-radius: 10px;
+  border: 2px solid #fff6e3;
+  width: 100%;
+  padding: 14px 22px;
+  font-family: @font-family;
+  font-size: 14px;
+  line-height: 140%;
+  color: @color-white;
+  background-color: @color-gray;
+  transition: all 0.25s ease;
+  outline: none;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:active,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: @color-white;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &::placeholder {
+    font-family: @font-family;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(rgba(255, 255, 255, 0.6));
+  }
+}
+
+.form-input:hover {
+  border-color: @color-gold;
+}
+
+.form-input:focus {
+  border-color: @color-gold-light;
+  box-shadow: 0 0 0 4px @color-gold-light;
+}
+
+.form-input:not(:placeholder-shown) {
+  border-color: @color-gold;
+  box-shadow: none;
+}
+
+// Чекбокс
+
+.form-input_checkbox ~ svg:first-of-type {
+  display: block;
+}
+
+.form-input_checkbox ~ svg:nth-of-type(2) {
+  display: none;
+}
+
+.form-input_checkbox:checked ~ svg:first-of-type {
+  display: none;
+}
+
+.form-input_checkbox:checked ~ svg:nth-of-type(2) {
+  display: block;
+}
+
+@media (min-width: @lg) {
+  .form-input {
+    font-size: 20px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+}
+
+// Валидация
+
+.has-error {
+  .form-input {
+    border-color: @color-error;
+    color: @color-error;
+
+    &::placeholder {
+      color: @color-error;
+    }
+  }
+
+  .help-block {
+    color: @color-error;
+  }
+}
+
+.has-success {
+  .form-input {
+    border-color: @color-gold;
+    color: @color-gold;
+
+    &::placeholder {
+      color: @color-gold;
+    }
+  }
+
+  .help-block {
+    color: @color-gold;
+  }
+}
