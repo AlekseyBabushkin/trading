@@ -21,20 +21,18 @@
 // require("blueimp-gallery/css/blueimp-gallery.min.css");
 // require("expose-loader?blueimp.Gallery!blueimp-gallery/js/blueimp-gallery.min.js");
 
-
 // slick-carousel
 // require("slick-carousel/slick/slick.css");
 // require("slick-carousel/slick/slick-theme.css");
 // require("expose-loader?slick!slick-carousel");
 
 // swiper slider
-// require("swiper/dist/css/swiper.css");
-// require("expose-loader?Swiper!swiper/dist/js/swiper.js");
+import 'swiper/dist/css/swiper.css';
+import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
 
 // vue.js
 // import Vue from 'vue';
 // window.Vue = Vue;
-
 
 // magnific-popup
 // require("magnific-popup/dist/magnific-popup.css");
@@ -62,4 +60,4 @@
 // require("lightbox2/dist/css/lightbox.css");
 
 // normalize.css
-require('normalize.css/normalize.css');
+import 'normalize.css/normalize.css';
