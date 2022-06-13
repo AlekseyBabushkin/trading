@@ -1,0 +1,48 @@
+@import (reference) '../../less/variables.less';
+
+.noUi-target {
+  background: @color-gray;
+  border-radius: 5px;
+  border: 1px solid @color-white;
+  box-shadow: none;
+}
+
+.noUi-horizontal {
+  height: 10px;
+}
+
+.noUi-connect {
+  background: @color-white;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -15px;
+}
+
+.noUi-handle:before {
+  display: none;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: @color-white;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.noUi-handle {
+  border: none;
+  border-radius: 10px 0px;
+  background: @color-gold;
+  cursor: pointer;
+  box-shadow: none;
+}

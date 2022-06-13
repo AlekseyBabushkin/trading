@@ -5,7 +5,6 @@ const heroHeight = hero.offsetHeight;
 
 window.addEventListener('scroll', () => {
   const scrollDistance = window.scrollY;
-  console.log(scrollDistance);
 
   if (scrollDistance >= heroHeight + headerHeight) {
     header.classList.add('header--fixed');

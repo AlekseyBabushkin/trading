@@ -25,6 +25,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "normalize.css": "^8.0.0",
+    "nouislider": "^15.6.0",
     "swiper": "^4.5.1",
     "vue": "^2.5.16"
   },

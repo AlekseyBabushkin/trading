@@ -9,17 +9,59 @@
 
       <div class="income__calculator calculator">
         <form class="calculator__form">
+          <div class="calculator__title">Сумма инвестирования</div>
           <label for="#">
-            Сумма инвестирования
-            <input class="calculator__range" type="range">
+            <span class="calculator__donat">100 ₽</span>
+            <div class="calculator__range" id="range-slider"></div>
           </label>
 
-          <label for="#" class="calculator__label">
-            <input type="radio" class="calculator__input" name="radio">
-            <input type="radio" class="calculator__input" name="radio">
-            <input type="radio" class="calculator__input" name="radio">
-            <input type="radio" class="calculator__input" name="radio">
-          </label>
+          <div class="calculator__text">Выберите срок инвестиций</div>
+
+          <div class="calculator__radios">
+            <label class="calculator__label">
+              <input type="radio" class="calculator__date" name="radio" id="oneDay" value="1 день">
+              <span class="calculator__custom ">1 день</span>
+            </label>
+            <label class="calculator__label">
+              <input type="radio" class="calculator__date" name="radio" id="sevenDay" value="7 дней">
+              <span class="calculator__custom ">7 дней</span>
+            </label>
+            <label class="calculator__label">
+              <input type="radio" class="calculator__date" name="radio" id="fourteenDay" value="14 дней">
+              <span class="calculator__custom ">14 дней</span>
+            </label>
+            <label class="calculator__label">
+              <input type="radio" class="calculator__date" name="radio" checked id="twentyEightDay" value="28 дней">
+              <span class="calculator__custom ">28 дней</span>
+            </label>
+          </div>
+
+          <div class="calculator__info">
+            <div class="calculator__values">
+              <div class="calculator__text">Сроки</div>
+              <div class="calculator__out" id="date-out">28 дней</div>
+            </div>
+            <div class="calculator__values">
+              <div class="calculator__text">Бонус</div>
+              <div class="calculator__out" id="bonus-out">+ 2.11 %</div>
+            </div>
+            <div class="calculator__values">
+              <div class="calculator__text">Капитализация</div>
+              <div class="calculator__out">Да</div>
+            </div>
+            <div class="calculator__values">
+              <div class="calculator__text">Итоговая сумма</div>
+              <div class="calculator__out" id="sum-out">146.14 ₽</div>
+            </div>
+            <div class="calculator__values">
+              <div class="calculator__text">В процентах</div>
+              <div class="calculator__out" id="percent-out">46.14 %</div>
+            </div>
+            <div class="calculator__values">
+              <div class="calculator__text">Прибыль</div>
+              <div class="calculator__out" id="profit-out">+54.11 ₽</div>
+            </div>
+          </div>
         </form>
       </div>
     </div>

@@ -61,3 +61,7 @@ import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
 
 // normalize.css
 import 'normalize.css/normalize.css';
+
+// nouislider
+import 'nouislider/dist/nouislider.min.css';
+import 'expose-loader?noUiSlider!nouislider/dist/nouislider.min.js';
