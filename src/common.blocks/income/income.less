@@ -2,16 +2,38 @@
 
 .income {
   padding: 25px 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -65px;
+    height: 150px;
+    width: 150px;
+    background-image: url('../income/img/income-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 
   @media (min-width: @lg) {
     padding: 50px 0;
+
+    &::after {
+      left: -80px;
+      top: -220px;
+      height: 300px;
+      width: 300px;
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
 
-    @media (min-width: @md) {
+    @media (min-width: @lg) {
       flex-direction: row;
     }
   }
@@ -67,7 +89,7 @@
     line-height: 140%;
     margin-bottom: 32px;
 
-    @media (min-width: @md) {
+    @media (min-width: @lg) {
       font-size: 22px;
       margin-bottom: 40px;
     }
@@ -76,15 +98,34 @@
   &__calculator {
     flex: 0 0 auto;
     width: 100%;
-    margin-left: 12px;
     padding: 30px;
     background-color: @color-gray;
     border-radius: 10px;
+    margin-bottom: 32px;
 
-    @media (min-width: @md) {
+    @media (min-width: @lg) {
+      margin-left: 12px;
       border-radius: 15px;
-      padding: 70px;
+      padding: 70px 70px 35px;
       width: 65%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @media (min-width: @lg) {
+      display: block;
+    }
+
+    &--bottom {
+      display: block;
+      margin: 0 auto;
+
+      @media (min-width: @lg) {
+        display: none;
+      }
     }
   }
 }

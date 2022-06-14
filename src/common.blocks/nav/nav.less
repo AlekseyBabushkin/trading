@@ -1,10 +1,33 @@
 @import (reference) '../../less/variables.less';
 
 .nav {
+  &__logo {
+    width: 155px;
+    height: 40px;
+    margin-bottom: 32px;
+    display: block;
+
+    @media (min-width: @md) {
+      margin-bottom: 80px;
+      svg {
+        width: 263px;
+        height: 67px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+
+    @media (min-width: @md) {
+      margin-bottom: 0;
+    }
+  }
+
   &__item {
     font-family: 'Bebas-Neue';
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 130%;
     text-transform: uppercase;
 
@@ -27,6 +50,37 @@
 
     &:hover {
       color: @color-gold;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    @media (min-width: @md) {
+      display: none;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    svg {
+      margin-right: 10px;
+      fill: @color-gold;
+    }
+
+    &:hover {
+      color: @color-gold;
+    }
+  }
+
+  &__social {
+    @media (min-width: @md) {
+      display: none;
     }
   }
 }
