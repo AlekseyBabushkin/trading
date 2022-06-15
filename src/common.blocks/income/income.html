@@ -5,8 +5,14 @@
         <h2 class="income__title" data-aos="fade-up" data-aos-duration="1000">Калькулятор доходности</h2>
         <p class="income__subtitle" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Посчитайте, сколько
           вы можете заработать вместе с Easy Forex</p>
-        <button class="btn btn--gold income__btn popup-link" href="#popup-feedback" type="button" data-aos="fade-up"
-          data-aos-delay="200" data-aos-duration="1000">Начать инвестировать</button>
+
+        <div class="income__btn">
+          <div class="button popup-link" href="#popup-feedback" data-aos="flip-right" data-aos-delay="200"
+            data-aos-duration="1000">
+            Начать инвестировать
+            <span class="button__line-deg"></span>
+          </div>
+        </div>
       </div>
 
       <div class="income__calculator calculator" data-aos="fade-up" data-aos-duration="1000">
@@ -22,19 +28,27 @@
           <div class="calculator__radios">
             <label class="calculator__label">
               <input type="radio" class="calculator__date" name="radio" id="oneDay" value="1 день">
-              <span class="calculator__custom ">1 день</span>
+              <div class="calculator__custom">1 день
+                <span class="calculator__line-deg"></span>
+              </div>
             </label>
             <label class="calculator__label">
               <input type="radio" class="calculator__date" name="radio" id="sevenDay" value="7 дней">
-              <span class="calculator__custom ">7 дней</span>
+              <div class="calculator__custom">7 дней
+                <span class="calculator__line-deg"></span>
+              </div>
             </label>
             <label class="calculator__label">
               <input type="radio" class="calculator__date" name="radio" id="fourteenDay" value="14 дней">
-              <span class="calculator__custom ">14 дней</span>
+              <div class="calculator__custom">14 дней
+                <span class="calculator__line-deg"></span>
+              </div>
             </label>
             <label class="calculator__label">
               <input type="radio" class="calculator__date" name="radio" checked id="twentyEightDay" value="28 дней">
-              <span class="calculator__custom ">28 дней</span>
+              <div class="calculator__custom">28 дней
+                <span class="calculator__line-deg"></span>
+              </div>
             </label>
           </div>
 
@@ -67,8 +81,11 @@
         </form>
       </div>
 
-      <button class="btn btn--gold income__btn--bottom popup-link" href="#popup-feedback" type="button">Начать
-        инвестировать</button>
+      <div class="button income__btn--bottom popup-link" href="#popup-feedback" data-aos="flip-right"
+        data-aos-delay="200" data-aos-duration="1000">
+        Начать инвестировать
+        <span class="button__line-deg"></span>
+      </div>
     </div>
   </div>
 </section>

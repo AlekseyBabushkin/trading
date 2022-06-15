@@ -44,11 +44,11 @@
 }
 
 .button {
-  max-width: 204px;
-  width: 100%;
-  padding: 19px;
+  width: calc(100% - 40px);
+  padding: 19px 0;
   border-top: 2px solid @color-gold;
   border-bottom: 2px solid @color-gold;
+  border-radius: 2px;
   font-weight: 500;
   font-size: 16px;
   color: @color-gold;
@@ -62,8 +62,8 @@
     position: absolute;
     bottom: -2px;
     left: -20px;
-    width: 20px;
-    height: 43px;
+    width: 22px;
+    height: 44px;
     border-bottom: 2px solid @color-gold;
     border-left: 2px solid @color-gold;
     transition: background-color 0 ease;
@@ -74,8 +74,8 @@
     position: absolute;
     top: -2px;
     right: -20px;
-    width: 20px;
-    height: 43px;
+    width: 22px;
+    height: 44px;
     border-top: 2px solid @color-gold;
     border-right: 2px solid @color-gold;
     transition: background-color 0 ease;
@@ -90,7 +90,8 @@
       width: 20px;
       height: 29px;
       border-left: 2px solid @color-gold;
-      transform: rotate(47deg);
+      border-radius: 2px;
+      transform: rotate(48deg);
       transition: background-color 0 ease;
     }
 
@@ -102,7 +103,8 @@
       width: 20px;
       height: 29px;
       border-right: 2px solid @color-gold;
-      transform: rotate(47deg);
+      border-radius: 2px;
+      transform: rotate(48deg);
       transition: background-color 0 ease;
     }
   }
@@ -114,5 +116,9 @@
   &:hover .button__line-deg::after {
     background-color: @color-gold;
     color: @color-bg;
+  }
+
+  @media (min-width: @sm) {
+    max-width: 204px;
   }
 }
