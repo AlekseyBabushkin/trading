@@ -6,20 +6,20 @@ const navItem = document.querySelectorAll('.nav__link');
 const body = document.body;
 
 burger.addEventListener('click', () => {
-  body.classList.toggle('none-scroll');
+  body.classList.toggle('lock');
   burger.classList.toggle('burger--active');
   nav.classList.toggle('header__nav--visible');
 });
 
 close.addEventListener('click', () => {
-  body.classList.toggle('none-scroll');
+  body.classList.toggle('lock');
   burger.classList.toggle('burger--active');
   nav.classList.toggle('header__nav--visible');
 });
 
 navItem.forEach((el) => {
   el.addEventListener('click', () => {
-    body.classList.remove('none-scroll');
+    body.classList.remove('lock');
     burger.classList.remove('burger--active');
     nav.classList.remove('header__nav--visible');
   });
