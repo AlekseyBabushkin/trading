@@ -3,7 +3,7 @@
 .btn {
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   text-align: center;
   width: 100%;
   padding: 15px;
@@ -40,5 +40,79 @@
       color: @color-gray;
       background-color: @color-brown;
     }
+  }
+}
+
+.button {
+  max-width: 204px;
+  width: 100%;
+  padding: 19px;
+  border-top: 2px solid @color-gold;
+  border-bottom: 2px solid @color-gold;
+  font-weight: 500;
+  font-size: 16px;
+  color: @color-gold;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -20px;
+    width: 20px;
+    height: 43px;
+    border-bottom: 2px solid @color-gold;
+    border-left: 2px solid @color-gold;
+    transition: background-color 0 ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -20px;
+    width: 20px;
+    height: 43px;
+    border-top: 2px solid @color-gold;
+    border-right: 2px solid @color-gold;
+    transition: background-color 0 ease;
+  }
+
+  &__line-deg {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -13px;
+      width: 20px;
+      height: 29px;
+      border-left: 2px solid @color-gold;
+      transform: rotate(47deg);
+      transition: background-color 0 ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: -13px;
+      width: 20px;
+      height: 29px;
+      border-right: 2px solid @color-gold;
+      transform: rotate(47deg);
+      transition: background-color 0 ease;
+    }
+  }
+
+  &:hover,
+  &:hover::before,
+  &:hover::after,
+  &:hover .button__line-deg::before,
+  &:hover .button__line-deg::after {
+    background-color: @color-gold;
+    color: @color-bg;
   }
 }
