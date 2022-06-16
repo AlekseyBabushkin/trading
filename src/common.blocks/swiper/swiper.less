@@ -1,16 +1,52 @@
 @import (reference) '../../less/variables.less';
 
 .swiper {
+  position: relative;
   &__button-prev,
   &__button-next {
-    background-color: @color-gold;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
     cursor: pointer;
   }
+
+  &__button-prev,
+  &__button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__button-prev {
+    left: -50px;
+  }
+
+  &__button-next {
+    right: -50px;
+  }
+
+  &__button-icon {
+    fill: @color-gold;
+    @media (min-width: @md) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.swiper-button-disabled {
+  .swiper__button-icon {
+    fill: @color-gold;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+}
+
+.swiper-container {
+  overflow: hidden;
 }
 .swiper-slide {
+  height: auto;
+}
+
+.swiper__item {
   background-color: @color-gray;
   height: auto;
 }
