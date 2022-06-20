@@ -15,7 +15,4 @@ window.addEventListener('scroll', () => {
   } else {
     header.classList.remove('header--fixed');
   }
-  console.log(scrollDistance);
 });
-
-console.log(heightScreen);

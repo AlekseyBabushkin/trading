@@ -27,8 +27,8 @@
 // require("expose-loader?slick!slick-carousel");
 
 // swiper slider
-import 'swiper/dist/css/swiper.css';
-import 'expose-loader?Swiper!swiper/dist/js/swiper.js';
+import 'swiper/swiper-bundle.min.css';
+import 'expose-loader?Swiper!swiper/swiper-bundle.min.js';
 
 // vue.js
 // import Vue from 'vue';

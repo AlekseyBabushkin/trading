@@ -2,6 +2,17 @@
 
 .swiper {
   position: relative;
+
+  @media (min-width: @lg) {
+    margin: -20px -32px -30px;
+  }
+
+  & > .swiper-container {
+    @media (min-width: @lg) {
+      padding: 20px 32px 30px;
+    }
+  }
+
   &__button-prev,
   &__button-next {
     cursor: pointer;
@@ -12,6 +23,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
   }
 
   &__button-prev {
