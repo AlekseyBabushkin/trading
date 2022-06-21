@@ -3,51 +3,35 @@
 .swiper {
   position: relative;
 
-  @media (min-width: @lg) {
-    margin: -20px -32px -30px;
+  &-button-prev::after,
+  &-button-next::after {
+    display: none;
+  }
+  &-button-prev,
+  &-button-next {
+    margin-top: 15px;
   }
 
-  & > .swiper-container {
-    @media (min-width: @lg) {
-      padding: 20px 32px 30px;
+  &-button-prev {
+    @media (min-width: @xxl) {
+      left: -30px;
     }
   }
 
-  &__button-prev,
-  &__button-next {
-    cursor: pointer;
+  &-button-next {
+    @media (min-width: @xxl) {
+      right: -30px;
+    }
   }
 
-  &__button-prev,
-  &__button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-
-  &__button-prev {
-    left: 0px;
-  }
-
-  &__button-next {
-    right: 0px;
-  }
-
-  &__button-icon {
-    fill: @color-gold;
+  &-button-icon {
+    display: none;
     @media (min-width: @md) {
-      width: 32px;
-      height: 32px;
+      fill: @color-gold;
     }
-  }
-}
-
-.swiper-button-disabled {
-  .swiper__button-icon {
-    fill: @color-gold;
-    opacity: 0.35;
-    pointer-events: none;
+    @media (min-width: @xxl) {
+      display: block;
+    }
   }
 }
 
