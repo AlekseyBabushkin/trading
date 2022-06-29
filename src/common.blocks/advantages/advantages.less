@@ -70,7 +70,7 @@
   &__item {
     position: relative;
     width: 100%;
-    border: 2px solid #ffb487;
+    border: 2px solid @color-brown;
     border-radius: 10px;
     padding: 20px;
     background-color: @color-gray;
@@ -78,9 +78,14 @@
     @media (min-width: @md) {
       max-width: 468px;
     }
+
+    &_gold {
+      border: 2px solid @color-gold;
+    }
   }
 
   &__subtitle {
+    max-width: 250px;
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
@@ -88,6 +93,14 @@
 
     @media (min-width: @lg) {
       font-size: 22px;
+      max-width: 330px;
+    }
+
+    span {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: @color-gold;
     }
   }
 

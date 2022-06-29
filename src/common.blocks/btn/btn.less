@@ -1,48 +1,5 @@
 @import (reference) '../../less/variables.less';
 
-.btn {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  width: 100%;
-  padding: 15px;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-
-  @media (min-width: @sm) {
-    width: 243px;
-  }
-
-  &--small {
-    width: 160px;
-    font-size: 14px;
-    line-height: 17px;
-    padding: 10px;
-  }
-
-  &--gold {
-    color: @color-gold;
-    border: 2px solid @color-gold;
-
-    &:hover {
-      color: @color-gray;
-      background-color: @color-gold;
-    }
-  }
-
-  &--brown {
-    color: @color-brown;
-    border: 2px solid @color-brown;
-
-    &:hover {
-      color: @color-gray;
-      background-color: @color-brown;
-    }
-  }
-}
-
 .button {
   width: calc(100% - 40px);
   padding: 19px 0;
@@ -81,6 +38,22 @@
     transition: background-color 0 ease;
   }
 
+  &_brown {
+    color: @color-brown;
+    border-top: 2px solid @color-brown;
+    border-bottom: 2px solid @color-brown;
+
+    &::before {
+      border-bottom: 2px solid @color-brown;
+      border-left: 2px solid @color-brown;
+    }
+
+    &::after {
+      border-top: 2px solid @color-brown;
+      border-right: 2px solid @color-brown;
+    }
+  }
+
   &__line-deg {
     &::before {
       content: '';
@@ -109,6 +82,16 @@
     }
   }
 
+  &__line-deg_brown {
+    &::before {
+      border-left: 2px solid @color-brown;
+    }
+
+    &::after {
+      border-right: 2px solid @color-brown;
+    }
+  }
+
   &:hover,
   &:hover::before,
   &:hover::after,
@@ -116,6 +99,14 @@
   &:hover .button__line-deg::after {
     background-color: @color-gold;
     color: @color-bg;
+  }
+
+  &_brown:hover,
+  &_brown:hover::before,
+  &_brown:hover::after,
+  &:hover .button__line-deg_brown::before,
+  &:hover .button__line-deg_brown::after {
+    background-color: @color-brown;
   }
 
   @media (min-width: @sm) {
